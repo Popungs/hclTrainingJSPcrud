@@ -1,4 +1,4 @@
-<%@page import="com.dao.UserDao"%>
+<%@page import="com.dao.UserDao,com.bean.*,java.util.*"%>
 
 <!DOCTYPE html>
 <html>
@@ -9,20 +9,11 @@
 <body>
 
 <p>Record successfully saved!</p>
-<%  String userName = (String)request.getSession().getAttribute("sesname");
- String userPass = (String)request.getSession().getAttribute("sespass");
-String userEmail = (String)request.getSession().getAttribute("uemail");
-String userSex = (String)request.getSession().getAttribute("usex");
-String userCountry = (String)request.getSession().getAttribute("uCountry");
-String userDept = (String)request.getSession().getAttribute("uDepartment");
-Long userIncome = (Long) request.getSession().getAttribute("uIncome");
 
-out.println("user Name : " + userName + " userEmail " + userEmail +
-		"userSex : " + userSex + " userCountry : " + userCountry + "userDept : " 
-		+ userDept + " userIncome : " + userIncome);
+<%
+User user = (User) request.getSession().getAttribute("sesname");
 
- 
- out.println("user : " + userName);
+ out.println(user);
 
 %>
 <br/>

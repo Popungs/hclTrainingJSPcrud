@@ -19,6 +19,11 @@ public long getIncome() {
 public void setIncome(long income) {
 	this.income = income;
 }
+@Override
+public String toString() {
+	return "User id : " + id + ", name : " + name + ", password: " + password + ", email: " + email + ", sex: " + sex
+			+ ", country: " + country + ", department: " + department + ", income: " + income;
+}
 public void setId(int id) {
 	this.id = id;
 }
