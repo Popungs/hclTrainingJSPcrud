@@ -28,7 +28,14 @@ User u=UserDao.getRecordById(Integer.parseInt(id));
 <option>Berma</option>
 <option>Other</option>
 </select>
+<tr><td>Department:</td><td>
+<select name="department" style="width:155px">
+<option>Dev</option>
+<option>Sales</option>
+<option>TechSupport</option>
+</select>
 </td></tr>
+<tr><td>Income:</td><td><input type="number" name="income"/></td></tr>
 <tr><td colspan="2"><input type="submit" value="Edit User"/></td></tr>
 </table>
 </form>
