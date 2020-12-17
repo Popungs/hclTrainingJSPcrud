@@ -36,12 +36,12 @@ public static int save(User u,HttpServletRequest request){
 		
 		HttpSession session = request.getSession();
 		session.setAttribute("sesname", u.getName());
-//		session.setAttribute("sespass", u.getPassword());
-//		session.setAttribute("uemail", u.getEmail());
-//		session.setAttribute("usex", u.getSex());
-//		session.setAttribute("uCountry", u.getCountry());
-//		session.setAttribute("uDepartment", u.getDepartment());
-//		session.setAttribute("uIncome", u.getIncome());
+		session.setAttribute("sespass", u.getPassword());
+		session.setAttribute("uemail", u.getEmail());
+		session.setAttribute("usex", u.getSex());
+		session.setAttribute("uCountry", u.getCountry());
+		session.setAttribute("uDepartment", u.getDepartment());
+		session.setAttribute("uIncome", u.getIncome());
 		
 	}catch(Exception e){System.out.println(e);}
 	return status;
