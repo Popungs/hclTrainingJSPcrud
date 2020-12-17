@@ -21,7 +21,7 @@ User u=UserDao.getRecordById(Integer.parseInt(id));
 <tr><td>Email:</td><td><input type="email" name="email" value="<%= u.getEmail()%>"/></td></tr>
 <tr><td>Sex:</td><td><input type="radio" name="sex" value="male"/>Male <input type="radio" name="sex" value="female"/>Female </td></tr>
 <tr><td>Country:</td><td>
-<select name="country">
+<select name="country" value = "<%= u.getCountry() %>">
 <option>India</option>
 <option>Pakistan</option>
 <option>Afghanistan</option>
@@ -29,13 +29,13 @@ User u=UserDao.getRecordById(Integer.parseInt(id));
 <option>Other</option>
 </select>
 <tr><td>Department:</td><td>
-<select name="department" style="width:155px">
+<select name="department"value = "<%= u.getDepartment() %>" style="width:155px" >
 <option>Dev</option>
 <option>Sales</option>
 <option>TechSupport</option>
 </select>
 </td></tr>
-<tr><td>Income:</td><td><input type="number" name="income"/></td></tr>
+<tr><td>Income:</td><td><input type="number" name="income" value = "<%= u.getIncome() %>"/></td></tr>
 <tr><td colspan="2"><input type="submit" value="Edit User"/></td></tr>
 </table>
 </form>
